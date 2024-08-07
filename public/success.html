@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <title>Registration Successful</title>
+    <style>
+        body {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          background-color: white;
+          font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        .main {
+          padding: 20px 30px;
+          margin: 0px 300px;
+          font-family: Arial;
+          box-shadow: 5px 5px 7px 5px #888888;
+        }
+
+        .main a{
+          font-size: 20px;
+        }
+
+        .container{
+          background: white;
+          text-align: center;
+          display:flex;
+          backdrop-filter: blur(10px);
+          border-radius: 15px;
+          margin: 100px;
+          padding: 100px;
+        }
+
+        .checkbox-wrapper{
+          margin-top: 20px;
+        }
+        .checkbox-wrapper .cbx {
+          -webkit-user-select: none;
+          user-select: none;
+          -webkit-tap-highlight-color: transparent;
+          cursor: default; 
+        }
+        .checkbox-wrapper .cbx span {
+          display: inline-block;
+          vertical-align: middle;
+          transform: translate3d(0, 0, 0);
+        }
+
+        .checkbox-wrapper .cbx span:first-child {
+          position: relative;
+          width: 100px;
+          height: 100px;
+          border-radius: 50%;
+          transform: scale(1);
+          vertical-align: middle;
+          border: 5px solid #04f424; 
+          background: #04f424; 
+          transition: all 0.4s ease;
+        }
+
+        .checkbox-wrapper .cbx span:first-child svg {
+          position: absolute;
+          z-index: 1;
+          top: 10px; 
+          left: 5px; 
+          width: 100px;
+          height: 100px; 
+          fill: none;
+          stroke: white;
+          stroke-width: 10;
+          stroke-linecap: round;
+          stroke-linejoin: round;
+          stroke-dasharray: 300px;
+          stroke-dashoffset: 300px; 
+          transition: all 0.6s ease;
+          transition-delay: 1s;
+          transform: translate3d(0, 0, 0);
+          animation: draw-check 2s ease forwards;
+        }
+
+        @keyframes draw-check {
+        to {
+              stroke-dashoffset: 0;
+            }
+        }
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+    <div class="row"> 
+        <div class="col-mod-6 main">
+            <div class="checkbox-wrapper">
+                <label class="cbx">
+                    <span>
+                        <svg viewBox="-20 0 150 100" height="100" width="150">
+                        <polyline points="10 30 29 50 75 0"></polyline>
+                        </svg>
+                    </span>
+                </label>
+            </div>    
+            <h2>Registered Successfully!!</h2> 
+            <a href="index.html">Back</a>
+        </div>
+    </div>   
+    </div>
+  </body>
+</html>
