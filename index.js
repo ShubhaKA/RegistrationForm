@@ -13,8 +13,7 @@ app.use(bodyParser.urlencoded({
     extended: true
 }));
 
-// Use environment variables for MongoDB connection string and port
-mongoose.connect(process.env.DB_CONNECTION_STRING, { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(process.env.DB_CONNECTION_STRING);
 var db = mongoose.connection;
 
 db.on('error', () => console.log("Error in Connecting to Database"));
