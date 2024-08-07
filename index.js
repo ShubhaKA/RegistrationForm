@@ -13,7 +13,12 @@ app.use(bodyParser.urlencoded({
     extended: true
 }));
 
-mongoose.connect(process.env.DB_CONNECTION_STRING);
+const username = process.env.MONGODB_USERNAME;
+const password = process.env.MONGODB_PASSWORD;
+mongoose.connect(`mongodb+srv://${username}:${password}@cluster0.v6y3ydk.mongodb.net/RegistrationDB?retryWrites=true&w=majority&appName=Cluster0`,{
+    useNewUrlParser : true,
+    useUnifiedTopology : true,
+});
 var db = mongoose.connection;
 
 db.on('error', () => console.log("Error in Connecting to Database"));
